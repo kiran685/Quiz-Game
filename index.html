@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>🧠 Quiz Game</h1>
+
+    <div id="settings">
+      <label for="category">Category:</label>
+      <select id="category">
+        <option value="All">All</option>
+        <option value="Geography">Geography</option>
+        <option value="Science">Science</option>
+        <option value="History">History</option>
+        <option value="Literature">Literature</option>
+      </select>
+
+      <label for="difficulty">Difficulty:</label>
+      <select id="difficulty">
+        <option value="All">All</option>
+        <option value="Easy">Easy</option>
+        <option value="Medium">Medium</option>
+      </select>
+
+      <button id="start-btn">Start Quiz</button>
+    </div>
+
+    <div id="question-box" style="display:none;">
+      <p id="question"></p>
+      <div id="choices"></div>
+
+      <div class="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+      <p id="timer">Time left: <span id="time">10</span>s</p>
+    </div>
+
+    <button id="next-btn" style="display:none;">Next</button>
+    <button id="submit-btn" style="display:none;">Submit</button>
+
+    <div id="result" style="display:none;">
+      <h2>Your Score: <span id="score"></span></h2>
+      <div id="leaderboard"></div>
+      <button onclick="location.reload()">Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
